@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!--
+Item Name: Elisyam - Web App & Admin Dashboard Template
+Version: 1.3
+Author: SAEROX
+Envato: https://www.themeforest.net/user/saerox?ref=Saerox
+
+** A license must be purchased on themeforest in order to legally use this template for your project **
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Elisyam - Search Results</title>
+        <meta name="description" content="Elisyam is a Web App and Admin Dashboard Template built with Bootstrap 4">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Fonts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>
+          WebFont.load({
+            google: {"families":["Montserrat:400,500,600,700","Noto+Sans:400,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+        </script>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="assets/vendors/css/base/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-select/bootstrap-select.min.css">
+        <link rel="stylesheet" href="assets/vendors/css/base/elisyam-1.2.css">
+        <link rel="stylesheet" href="assets/css/datatables/datatables.min.css">
+        <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    </head>
+    <body id="page-top">
+        <!-- Begin Preloader -->
+        <div id="preloader">
+            <div class="canvas">
+                <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+                <div class="spinner"></div>   
+            </div>
+        </div>
+        <!-- End Preloader -->
+        <div class="page">
+            <!-- Begin Header -->
+            <header class="header">
+                <nav class="navbar fixed-top">      
+                    <!-- Begin Search Box-->
+                    <div class="search-box">
+                        <button class="dismiss"><i class="ion-close-round"></i></button>
+                        <form id="searchForm" action="#" role="search">
+                            <input type="search" placeholder="Search something ..." class="form-control">
+                        </form>
+                    </div>
+                    <!-- End Search Box-->
+                    <!-- Begin Topbar -->
+                    <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
+                        <!-- Begin Logo -->
+                        <div class="navbar-header">
+                            <a href="db-default.html" class="navbar-brand">
+                                <div class="brand-image brand-big">
+                                    <img src="assets/img/logo-big.png" alt="logo" class="logo-big">
+                                </div>
+                                <div class="brand-image brand-small">
+                                    <img src="assets/img/logo.png" alt="logo" class="logo-small">
+                                </div>
+                            </a>
+                            <!-- Toggle Button -->
+                            <a id="toggle-btn" href="#" class="menu-btn active">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <!-- End Toggle -->
+                        </div>
+                        <!-- End Logo -->
+                        <!-- Begin Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+                            <!-- Search -->
+                            <!-- <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="la la-search"></i></a></li> -->
+                            <li class="nav-item d-flex align-items-center singleLink"><a id="search" href="#">Help</a></li>
+                            <!-- End Search -->
+                            <!-- Begin Notifications -->
+                            <li class="nav-item dropdown"><a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="la la-bell animated infinite swing"></i><span class="badge-pulse"></span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu notification">
+                                    <li>
+                                        <div class="notifications-header">
+                                            <div class="title">Notifications (4)</div>
+                                            <div class="notifications-overlay"></div>
+                                            <img src="assets/img/notifications/01.jpg" alt="..." class="img-fluid">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-icon">
+                                                <i class="la la-user"></i>
+                                            </div>
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    New user registered
+                                                </div>
+                                                <span class="date">2 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-icon">
+                                                <i class="la la-calendar-check-o"></i>
+                                            </div>
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    New event added
+                                                </div>
+                                                <span class="date">7 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-icon">
+                                                <i class="la la-history"></i>
+                                            </div>
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    Server rebooted
+                                                </div>
+                                                <span class="date">7 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="message-icon">
+                                                <i class="la la-twitter"></i>
+                                            </div>
+                                            <div class="message-body">
+                                                <div class="message-body-heading">
+                                                    You have 3 new followers
+                                                </div>
+                                                <span class="date">10 hours ago</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">View All Notifications</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- End Notifications -->
+                            <!-- User -->
+                            <li class="nav-item dropdown"><a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><img src="assets/img/avatar/avatar-01.jpg" alt="..." class="avatar rounded-circle"></a>
+                                <ul aria-labelledby="user" class="user-size dropdown-menu">
+                                    <li class="welcome">
+                                        <a href="#" class="edit-profil"><i class="la la-gear"></i></a>
+                                        <img src="assets/img/avatar/avatar-01.jpg" alt="..." class="rounded-circle">
+                                    </li>
+                                    <li>
+                                        <a href="pages-profile.html" class="dropdown-item"> 
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="app-mail.html" class="dropdown-item"> 
+                                            Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-item no-padding-bottom"> 
+                                            Settings
+                                        </a>
+                                    </li>
+                                    <li class="separator"></li>
+                                    <li>
+                                        <a href="pages-faq.html" class="dropdown-item no-padding-top"> 
+                                            Faq
+                                        </a>
+                                    </li>
+                                    <li><a rel="nofollow" href="pages-login.html" class="dropdown-item logout text-center"><i class="ti-power-off"></i></a></li>
+                                </ul>
+                            </li>
+                            <!-- End User -->
+                        </ul>
+                        <!-- End Navbar Menu -->
+                    </div>
+                    <!-- End Topbar -->
+                </nav>
+            </header>
+            <!-- End Header -->
+            <!-- Begin Page Content -->
+            <div class="page-content d-flex align-items-stretch">
+                <div class="default-sidebar">
+                    <!-- Begin Side Navbar -->
+                    <nav class="side-navbar box-scroll sidebar-scroll shrinked">
+                        <!-- Begin Main Navigation -->
+                        <ul class="list-unstyled">
+                            <li class="active"><a href="db-default.html"><i class="la la-columns"></i><span>Dashboard</span></a>
+                            <!-- <li class="active"><a href="manage-bookings.html"><i class="la la-columns"></i><span>Manage Bookings</span></a> -->
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled">
+                            <li><a href="#dropdown-ui" aria-expanded="false" data-toggle="collapse"><i class="la la-share-alt"></i><span>Manage Reservations</span></a>
+                                <ul id="dropdown-ui" class="collapse list-unstyled pt-0">
+                                    <li><a href="manage-bookings.html">Bookings</a></li>
+                                    <li><a href="manage-cancellation.html">Cancellation</a></li>
+                                    <li><a href="manage-refunds.html">Refunds</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- End Main Navigation -->
+                    </nav>
+                    <!-- End Side Navbar -->
+                </div>
+                <!-- Begin Content -->
+                <div class="content-inner search-results active">
+                    <div class="container-fluid">
+                        <!-- Begin Page Header-->
+                        <div class="row">
+                            <div class="page-header">
+                                <div class="d-flex align-items-center">
+                                    <h2 class="page-header-title">Manage Bookings</h2>
+                                    <!-- <div>
+                                        <ul class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="db-default.html"><i class="ti ti-home"></i></a></li>
+                                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                            <li class="breadcrumb-item active">Search Results</li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Page Header -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="widget has-shadow">
+                                    <div class="widget-body searchFilters">
+                                        <form>
+                                            <div class="row">
+                                                <div class="input-group col mb-3">
+                                                  <div class="input-group-prepend">
+                                                       <select class="selectpicker show-menu-arrow" title="Customer Name"> 
+                                                            <option>Customer Name</option>
+                                                            <option>Pessenger Name</option>
+                                                        </select>
+                                                      </div>
+                                                      <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter Name">
+                                                </div>
+                                                <div class="input-group col mb-3">
+                                                  <div class="input-group-prepend">
+                                                       <select class="selectpicker show-menu-arrow" title="Confirmation ID"> 
+                                                            <option>Confirmation ID</option>
+                                                            <option>Booking ID</option>
+                                                        </select>
+                                                      </div>
+                                                      <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Enter Name">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="input-group col">
+                                                     <div class="input-group-prepend">
+                                                       <select class="selectpicker show-menu-arrow" title="Date Filter"> 
+                                                            <option>Booking Date</option>
+                                                            <option>Travel Date</option>
+                                                        </select>
+                                                      </div>
+                                                      <input type="text" class="form-control" id="daterange"  aria-label="Text input with dropdown button" placeholder="Enter Name">
+                                                        <!-- <input type="text" class="form-control" placeholder="Select Date"> -->
+                                                    </div>
+                                                <div class="col text-left mt-2">
+                                                    <div class="row col-md-12 pr-0 mr-0">
+                                                        <div class="col-md-7 no-padding">
+                                                            <select class="selectpicker show-menu-arrow w-100" title="Booking Status"> 
+                                                                <option>Pending</option>
+                                                                <option>Confirmed</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-5 text-right pr-0">
+                                                            <button type="submit" class="btn btn-danger col-md-8 mb-2">Clear</button>
+                                                            <!-- <a href="javascript:void(0)" class="ml-3">Clear</a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <!-- Begin Widget 07 -->
+                                <div class="widget widget-07 has-shadow">
+                                    <!-- Begin Widget Header -->
+                                    <div class="widget-header bordered d-flex align-items-center">
+                                        <h2>Bookings</h2>
+                                        <div class="col-md-8 text-left flex-row justify-content-between">
+                                            <div class="flex-row align-items-baseline">
+                                                <label class="mr-2">Filter By</label>
+                                                <!-- <div class="btn-group" role="group">
+                                                    <button type="button" class="btn btn-primary ripple">Trips</button>
+                                                    <button type="button" class="btn btn-primary ripple" style="background: #fff;color: #000">Hotels</button>
+                                                    <button type="button" class="btn btn-primary ripple">Vacations</button>
+                                                    <button type="button" class="btn btn-primary ripple">Activities</button>
+                                                </div> -->
+                                                <ul class="nav nav-tabs" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active show" id="i-base-tab-1" data-toggle="tab" href="#i-tab-1" role="tab" aria-controls="i-tab-1" aria-selected="true"><i class="ion-at mr-2"></i>Hotels</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="i-base-tab-2" data-toggle="tab" href="#i-tab-2" role="tab" aria-controls="i-tab-2" aria-selected="false"><i class="ion-clipboard mr-2"></i>Trips</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="i-base-tab-3" data-toggle="tab" href="#i-tab-3" role="tab" aria-controls="i-tab-3" aria-selected="false"><i class="ion-flash mr-2"></i>Vacation Rentals</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="i-base-tab-4" data-toggle="tab" href="#i-tab-4" role="tab" aria-controls="i-tab-4" aria-selected="false"><i class="ion-flash mr-2"></i>Activities</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                                <button type="button" class="btn btn-danger ripple pull-right"><i class="la la-refresh mr-0"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- End Widget Header -->
+                                    <!-- Begin Widget Body -->
+                                    <div class="widget-body">
+                                        <div id="sorting-table_wrapper" class="table-responsive table-scroll table-clickable padding-right-10" style="max-height:520px;">
+                                            <table id="sorting-table" class="table table-stripe mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Booking Date</th>
+                                                        <th>Travel ID</th>
+                                                        <th>Customer Name</th>
+                                                        <th>Pessanger Name</th>
+                                                        <th>Start Date</th>
+                                                        <th>End Date</th>
+                                                        <th><span style="width:100px;">Status</span></th>
+                                                        <th>Payment Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td   data-toggle="modal" data-target="#modal-centered" class="text-info">MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small danger">Cancelled</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small success">Confimed</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small info">In Prosess</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small danger">Cancelled</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small info">Paid</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small danger">Cancelled</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small success">Confimed</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small info">In Prosess</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small danger">Cancelled</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span class="text-primary">054-01-FR</span></td>
+                                                        <td>MVT03-2018101803REP</td>
+                                                        <td>Akash</td>
+                                                        <td>Pushkaraj</td>
+                                                        <td>11/21/2017</td>
+                                                        <td>10/21/2017</td>
+                                                        <td><span style="width:100px;"><span class="badge-text badge-text-small info">Paid</span></span></td>
+                                                        <td>$139.45</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- End Widget Body -->
+                                    <!-- Begin Widget Footer -->
+                                    <div class="widget-footer d-flex align-items-center">
+                                        <div class="mr-auto p-2">
+                                            <span class="display-items">Showing 1-30 / 150 Results</span>
+                                        </div>
+                                        <div class="p-2">
+                                            <nav aria-label="...">
+                                                <ul class="pagination justify-content-end">
+                                                    <li class="page-item disabled">
+                                                        <span class="page-link"><i class="ion-chevron-left"></i></span>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item active">
+                                                        <span class="page-link">2<span class="sr-only">(current)</span></span>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#"><i class="ion-chevron-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <!-- End Widget Footer -->
+                                </div>
+                        </div>
+                    </div>
+                    <!-- End Container -->
+                    <!-- Begin Page Footer-->
+                    <footer class="main-footer">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-xl-start justify-content-lg-start justify-content-md-start justify-content-center">
+                                <a class="btn btn-gradient-01 text-white" href="https://www.saerox-design.com/elisyam/support-center.html">Support Center</a>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-xl-end justify-content-lg-end justify-content-md-end justify-content-center">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="documentation.html">Documentation</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="changelog.html">Changelog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End Page Footer -->
+                    <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+                </div>
+                <!-- End Content -->
+            </div>
+            <!-- End Page Content -->
+        </div>
+        
+        <!-- Begin Centered Modal -->
+        <div id="modal-centered" class="modal fade productDetails">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header mb-5 text-light flex-column">
+                        <div class="container">
+                            <div class="row">
+                                <div class="w-100 flex-row flex-row mb-3 mt-2">
+                                    <h4 class="modal-title text-light"># zbr-51100</h4>
+                                    
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true">×</span>
+                                        <span class="sr-only">close</span>
+                                    </button>
+                                </div>
+                                <div class="d-flex justify-content-between w-100 align-items-end">
+                                    <div class="details w-50">
+                                        <h1 class="text-light mb-3">Pushkraj Shelke </h1>
+                                        <div class="flex-row">
+                                            <div class="dateWrapper">
+                                                Hotel V <span class="ml-3 mr-3">|</span>
+                                            </div>
+                                            <div class="dateWrapper">
+                                                <i class="la la-calendar mr-2"></i> Jul 5, 2018 – Jul 7, 2018 <span class="ml-3 mr-3">|</span>
+                                            </div>
+                                            <div class="occupancyDetails">
+                                                2 adult   0 child <span class="ml-3 mr-3">|</span> 1 room
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="actionWrapper">
+                                        <button class="btn btn-danger" data-toggle="modal" data-target="#cancellation"><i class="la la-ban"></i> Cancel Booking</button>
+                                        <button class="btn btn-info"  data-toggle="modal" data-target="#confirmation"><i class="la la-send"></i> Send Confirmation</button>
+                                        <button class="btn btn-success"><i class="la la-print"></i>Print</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <h3 class="text-info">Booking Details</h3>
+                            <div class="row flex-row justify-content-start border-bottom pb-5 mb-5">
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Booking ID</label>
+                                    <span class="text-dark">-</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Booked At</label>
+                                    <span class="text-dark">Jul 05, 2018 13:46</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Booking Status</label>
+                                    <span class="text-dark"><span class="badge-text badge-text-small default text-danger">Cancelled</span></span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Payment Status</label>
+                                    <span class="text-dark"><span class="badge-text badge-text-small default text-info">In Progress</span></span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Hotel Confirmation ID:</label>
+                                    <span class="text-dark">Hotel confirmed No HCN provided</span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Location:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">2nd Floor, Unit no. 203,</div>
+                                        <div class="addressLine2">Pride Gateaway, Baner, Pune, </div>
+                                        <div class="addressLine3">Maharashtra - 411045</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Map:</label>
+                                    <span class="text-dark mapWrapper">
+                                        <img src="assets/img/pin-Map-Vector.png">
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="text-info">Package Details</h3>
+                            <div class="row flex-row justify-content-start border-bottom pb-5 mb-5">
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Check In:</label>
+                                    <span class="text-dark">Jul 01, 2018 12:00</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Check Out:</label>
+                                    <span class="text-dark">Jul 05, 2018 13:46</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>No. of Adults:</label>
+                                    <span class="text-dark">2</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>No. of Children:</label>
+                                    <span class="text-dark">0</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>No. of Rooms:</label>
+                                    <span class="text-dark">1</span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Room Type:</label>
+                                    <span class="text-dark">Superior</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Food:</label>
+                                    <span class="text-dark">Room Only</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Bed:</label>
+                                    <span class="text-dark">
+                                        Queen x 1 
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Room View:</label>
+                                    <span class="text-dark">
+                                       -
+                                    </span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Refundable:</label>
+                                    <span class="text-dark mapWrapper">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Rate Type:</label>
+                                    <span class="text-dark">Superior</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Earnings:</label>
+                                    <span class="text-dark">Room Only</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Cost Price:</label>
+                                    <span class="text-dark">
+                                        Queen x 1 
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Payment Amount:</label>
+                                    <span class="text-dark">
+                                       -
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 pt-4 pb-4">
+                                        <label>Cancellation policy</label>
+                                        <span class="text-dark mapWrapper">
+                                            There will be a penalty of 100% if you cancel the booking from July 5, 2018 08:25 (GMT/UTC +00:00).
+                                        </span>
+                                    </div>
+                                    <div class="col-md-9 pt-4 pb-4">
+                                        <label>Cancellation Remarks</label>
+                                        <span class="text-dark mapWrapper">
+                                            Start date: 2018-07-05T00:00:00 End date: 2018-07-07T00:00:00 Text: Room type: Superior Double Room. Know Before You Go No pets and no service animals are allowed at this property. Fees The following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: SGD 10 per person (approximately) The above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Extra-person charges may apply and vary depending on property policy. Government-issued photo identification and a credit card or cash deposit are required at check-in for incidental charges. Special requests are subject to availability upon check-in and may incur additional charges. Special requests cannot be guaranteed.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-info">Guest Details</h3>
+                            <div class="row flex-row justify-content-start border-bottom pb-5 mb-5">
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Salutation</label>
+                                    <span class="text-dark">Mr.</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>First Name</label>
+                                    <span class="text-dark">Pushkaraj</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Last Name</label>
+                                    <span class="text-dark">Shelke</span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Email</label>
+                                    <span class="text-dark">pushkaraj@gmail.com</span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Contact</label>
+                                    <span class="text-dark">+91 9373470791</span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>C of Passport:</label>
+                                    <span class="text-dark">
+                                       PR123456
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>Street:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>City:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-2 pt-4 pb-4">
+                                    <label>State:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Country:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-3 pt-4 pb-4">
+                                    <label>Postal Code:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                                <div class="col-md-9 pt-4 pb-4">
+                                    <label>Special Request:</label>
+                                    <span class="text-dark">
+                                        <div class="addressLine1">Pride Gateaway</div>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <h3 class="text-info mb-4">Room Leads Guest</h3>
+                            <div class="row flex-row justify-content-start border-bottom pb-5 mb-5">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Room no.</th>
+                                                <th>Salutation</th>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Nationality</th>
+                                                <th>Room remarks</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>101</td>
+                                                <td>Mr.</td>
+                                                <td>Akash</td>
+                                                <td>Badiyani</td>
+                                                <td>Indian</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Centered Modal -->
+
+        <!-- Begin Cancellation Modal -->
+        <div id="cancellation" class="modal Cancellation fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Would you like to cancel this booking?</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Cancellation penalty may be imposed, please check cancellation policy.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-shadow" data-dismiss="modal">NO, KEEP THIS BOOKING</button>
+                        <button type="button" class="btn btn-primary">YES, PLEASE DO IT!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Cancellation Modal -->
+        <!-- Begin Send Confirmation Modal -->
+        <div id="confirmation" class="modal confirmation fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Send booking confirmation email</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Recipient email
+                        </p>
+                        <input class="mdl-textfield__input" type="text" id="sample3" placeholder="Pushkaraj@hartleylab.com">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-shadow" data-dismiss="modal">NO, KEEP THIS BOOKING</button>
+                        <button type="button" class="btn btn-primary">YES, PLEASE DO IT!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Centered Modal -->
+        <!-- Begin Vendor Js -->
+        <script src="assets/vendors/js/base/jquery.min.js"></script>
+        <script src="assets/vendors/js/base/core.min.js"></script>
+        <script src="assets/vendors/js/datepicker/moment.min.js"></script>
+        <script src="assets/vendors/js/bootstrap-select/bootstrap-select.min.js"></script>
+        <script src="assets/vendors/js/datepicker/daterangepicker.js"></script>
+        <script src="assets/js/components/datepicker/datepicker.js"></script>
+        <!-- End Vendor Js -->
+        <!-- Begin Page Vendor Js -->
+        <script src="assets/vendors/js/datatables/datatables.min.js"></script>
+        <script src="assets/vendors/js/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+        <script src="assets/vendors/js/app/app.min.js"></script>
+        <!-- End Page Vendor Js -->
+        <!-- Begin Page Snippets -->
+        <script src="assets/js/components/tables/tables.js"></script>
+        <!-- End Page Snippets -->
+    </body>
+</html>
